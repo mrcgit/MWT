@@ -12,6 +12,7 @@ import views.FirstView;
 
 import components.templates.Template;
 
+
 public class Main {
 
 	public static void main(String[] args) throws JsonGenerationException, JsonMappingException{
