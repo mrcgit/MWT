@@ -1,0 +1,32 @@
+
+.elegant{
+	background-color: red;
+	border-radius: 10px;
+	
+}
+
+.default-toolbar{
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: #eee;
+	height: 100px;
+}
+
+.default-menu{
+	position: absolute;
+	top: 100px;
+	bottom: 0px;
+	left: 0px;
+	width: 200px;
+	background-color: yellow;
+}
+
+.default-board{
+	position: absolute;
+	top: 100px;
+	bottom: 0px;
+	left: 200px;
+	right: 0px;
+}
