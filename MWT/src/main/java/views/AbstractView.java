@@ -1,10 +1,13 @@
 package views;
 
+import presenters.Presenter;
 import components.builder.AbstractTemplateBuilder;
 import components.builder.TemplateBuildDirector;
 import components.templates.Template;
 
-public abstract class AbstractView {
+public abstract class AbstractView<E extends Presenter> {
+	
+	private Presenter presenter;
 	private AbstractTemplateBuilder builder;
 	private Template template;
 	
@@ -46,6 +49,16 @@ public abstract class AbstractView {
 
 	private void setBuilder(AbstractTemplateBuilder builder) {
 		this.builder = builder;
+	}
+
+
+	public Presenter getPresenter() {
+		return presenter;
+	}
+
+
+	public void setPresenter(Presenter p) {
+		this.presenter = p;
 	}
 
 
