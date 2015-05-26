@@ -16,24 +16,27 @@ import components.templates.Template;
 public class Main {
 
 	public static void main(String[] args) throws JsonGenerationException, JsonMappingException{
-		
-		AbstractView view = new CustomView();
+
+		AbstractView<?> view = new CustomView();
 		view.init();
+		view.setName("index");
 		Template template = view.getTemplate();
-		
-		String CustomTreePath = PropertiesUtil.getProperties().getProperty("CustomTreePath");
+
 		ObjectMapper mapper = new ObjectMapper();
 		try {
-			mapper.writeValue(new File(CustomTreePath), template);
+			String resourcesPath = PropertiesUtil.getResourcesPath();
+			StringBuilder sb = new StringBuilder();
+			sb.append(resourcesPath).append(view.getName()).append(".json");
+			mapper.writeValue(new File(sb.toString()), template);
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
-		
+
 	}
 
-	
 
-	
-	
-	
+
+
+
+
 }
