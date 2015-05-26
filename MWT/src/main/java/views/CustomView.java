@@ -15,7 +15,7 @@ public class FirstView extends DefaultView{
 		template.getToolbar().setChild(panel);
 		
 		Panel panel2 = new Panel();
-		panel2.setContent("<div>Questo è un pannello annidato</div>");
+		panel2.setContent("<div>Questo Ã¨ un pannello annidato</div>");
 		panel.setChild(panel2);
 		
 		Panel panel3 = new Panel();
