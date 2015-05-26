@@ -1,9 +1,8 @@
 package utils;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.Properties;
 
 public class PropertiesUtil {
@@ -23,6 +22,16 @@ public class PropertiesUtil {
 		return prop;
 		
 	}
+	
+	
+	
+	public static String getResourcesPath(){
+		URL resource = PropertiesUtil.class.getClassLoader().getResource("config.properties");
+		String path = resource.getPath().split("config.properties")[0];
+		return path;
+	}
+	
+
 	
 	
 
