@@ -6,17 +6,19 @@ import components.builder.TemplateBuildDirector;
 import components.templates.Template;
 
 public abstract class AbstractView<E extends Presenter> {
-	
+
 	private Presenter presenter;
 	private AbstractTemplateBuilder builder;
 	private Template template;
-	
+	private String name;
+	//
+
 	public abstract void init();
 
 
-/**
- * Instances a new Template using a
- */
+	/**
+	 * Instances a new Template
+	 */
 	protected void instanceTemplate(){
 		AbstractTemplateBuilder builder = getBuilder();
 		TemplateBuildDirector director = new TemplateBuildDirector();
@@ -24,7 +26,11 @@ public abstract class AbstractView<E extends Presenter> {
 		Template template = builder.getTemplate();
 		setTemplate(template);
 	}
-	
+
+	/**
+	 * 
+	 * @param builder the Template builder
+	 */
 	protected void useTemplate(AbstractTemplateBuilder builder){
 		setBuilder(builder);
 	}
@@ -61,6 +67,17 @@ public abstract class AbstractView<E extends Presenter> {
 		this.presenter = p;
 	}
 
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	
 
 
 
