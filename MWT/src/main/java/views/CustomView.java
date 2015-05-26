@@ -1,6 +1,7 @@
 package views;
 
 import components.Panel;
+import components.builder.AbstractTemplateBuilder;
 import components.templates.Template;
 
 public class CustomView extends DefaultView{
@@ -24,6 +25,13 @@ public class CustomView extends DefaultView{
 		panel3.setContent("Il contenuto del pannello 3");
 		template.getBoard().setChild(panel3);
 		
+	}
+	/**
+	 * Override this method to use a different template;
+	 */
+	@Override
+	protected void useTemplate(AbstractTemplateBuilder builder) {
+		super.useTemplate(builder);
 	}
 
 
