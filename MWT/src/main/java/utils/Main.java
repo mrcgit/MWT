@@ -24,7 +24,7 @@ public class Main {
 		String CustomTreePath = PropertiesUtil.getProperties().getProperty("CustomTreePath");
 		ObjectMapper mapper = new ObjectMapper();
 		try {
-			mapper.writeValue(new File(resourcePath), template);
+			mapper.writeValue(new File(CustomTreePath), template);
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
