@@ -8,7 +8,7 @@ import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import views.AbstractView;
-import views.FirstView;
+import views.CustomView;
 
 import components.templates.Template;
 
@@ -17,11 +17,11 @@ public class Main {
 
 	public static void main(String[] args) throws JsonGenerationException, JsonMappingException{
 		
-		AbstractView view = new FirstView();
+		AbstractView view = new CustomView();
 		view.init();
 		Template template = view.getTemplate();
 		
-		String resourcePath = PropertiesUtil.getProperties().getProperty("ResourcePath");
+		String CustomTreePath = PropertiesUtil.getProperties().getProperty("CustomTreePath");
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			mapper.writeValue(new File(resourcePath), template);
