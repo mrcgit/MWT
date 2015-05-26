@@ -3,7 +3,7 @@ package views;
 import components.Panel;
 import components.templates.Template;
 
-public class FirstView extends DefaultView{
+public class CustomView extends DefaultView{
 
 	@Override
 	public void init() {
