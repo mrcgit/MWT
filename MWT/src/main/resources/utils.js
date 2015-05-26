@@ -1,5 +1,1 @@
-var jsonFile = {};
-
-$.getJSON("index.json", function(data) {
-	jsonFile = data.jsonFile;
-}
+var jsonFile = document.location.href.match(/[^\/]+$/)[0].split("html")[0] + "json";
