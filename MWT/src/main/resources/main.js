@@ -51,7 +51,7 @@ function appendChildComponent(parent, child){
 		appendChildComponent(tag, child.child);
 }
 
-$.getJSON("template.json", function(data) {
+$.getJSON(jsonFile, function(data) {
 	$("#toolbar").html(data.toolbar.content);
 	$("#toolbar").attr("class", data.toolbar.cls);
 	$("#toolbar").attr("height", data.toolbar.height);
