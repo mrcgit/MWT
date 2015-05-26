@@ -30,6 +30,6 @@ public interface Component<E extends Enum<HTMLTag>> {
 
 	public void setContent(String content);
 
-	
+	public HTMLTag getTag();
 	
 }
