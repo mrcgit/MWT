@@ -32,6 +32,8 @@ public class Main {
 			System.out.println(e.getMessage());
 		}
 		System.out.println("Prova commit");
+		System.out.println("Seconda commit");
+
 
 	}
 
